@@ -1,10 +1,38 @@
+<div class="container">
+<div class="row">
+  <div class="col s4 offset-s4 center"><h4 class="label"> {{weather.weather[0].description}}</h4><h5> {{weather.main.temp}} </h5></div>
+</div>
+</div>
 
-<div>
-  <div><h4> {{weather.weather[0].description}}</h4><h5> {{weather.main.temp}} </h5></div>
-  <div ng-repeat="result in results"> <b>Food:</b> {{result.name}} : {{result.formatted_address}} <br> Rating :
+<div class="row">
+  <div id="left" class="col s5 offset-s1 explore">
+  <h4 class="label"> Restaurants </h4>
+  <div ng-repeat="result in results | limitTo: 10"> <b> {{result.name}} : </b> <br> {{result.formatted_address}} <br> Rating :
   {{result.rating}}</div>
-  <div ng-repeat="art in arts"> <b>Arts:</b> {{art.name}} : {{art.formatted_address}} </div>
-  <div ng-repeat="deal in promos"> <b>Deals:</b> {{deal.deal.title}} : {{deal.deal.short_title}} </div>
-  <div ng-repeat="event in events"> <b>Event:</b> {{event.title[0]}} </div>
 
+  </div>
+  <div class="col s5 explore"> 
+  <h4 class="label"> Places to Visit </h4>
+  <div ng-repeat="art in arts | limitTo: 10"> <b> {{art.name}} : </b> <br>{{art.formatted_address}} </div>
+  </div>
+</div>
+
+<div class ="row">
+  <div id="left" class="col s5 offset-s1 explore"> 
+  <h4 class="label"> Deals </h4>
+  <div ng-repeat="deal in promos"> <b><a href ={{deal.deal.url}}> {{deal.deal.title}} </a>: </b>{{deal.deal.short_title}} </div>
+  </div>
+  <div class="col s5 explore"> 
+  <h4 class="label"> Events </h4>
+  <div ng-repeat="event in events"> <b> <a href = {{event.url[0]}}>{{event.title[0]}} </a></b></br> 
+  Venue: <a href = {{event.venue_url[0]}}> {{event.venue_name[0]}}</a></div>
+  </div>
+</div>
+
+<div ng-controller="exploreController">
+<div class="container">
+  <h4 class="label"> Translate </h4>
+  <input id= "input" type="text" ng-model='translate' placeholder="What can we translate for you?" /> 
+   <a class="waves-effect waves-light btn" type='submit' ng-click='translateApi()' >TRANSLATE </a>
+</div>
 </div>
