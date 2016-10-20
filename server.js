@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var keys  = require("./config.js");
 var request = require('request');
 var query  = require("./query.js");
+var parseString = require('xml2js').parseString;
 
 var app = express();
 
@@ -31,7 +32,7 @@ app.post('/arts', function(req,res){
   query.city = req.body.city;
   var queryArts = query.museum + query.city + '&key=' + keys.google;
 
-<<<<<<< HEAD
+
   request(queryArts, function(error, resp, body){
     if(error) {
       console.log(error);
@@ -52,12 +53,36 @@ app.post('/weather', function(req,res){
   })
 })
 
-var port = process.env.PORT || 8888;
+app.post('/promos', function(req,res){
+  query.city = req.body.city;
+  var queryPromos = query.promos + keys.sqoot + '&location=' + query.city;
 
-app.listen(port, function(){
-	console.log("App listening on port: ", port);
-});
-=======
+  request(queryPromos, function(error, resp, body){
+    if(error) {
+      console.log(error);
+    }
+    res.end(resp.body);
+  })
+})
+
+app.post('/events', function(req,res){
+  query.city = req.body.city;
+  var queryEvents = query.events + keys.eventful + '&location=' + query.city + '&date=Future';
+
+  request(queryEvents, function(error, resp, body){
+    if(error) {
+      console.log(error);
+    }
+
+    parseString(resp.body, function(err, result){
+      console.log(result);
+      res.end(JSON.stringify(result));
+    });
+    
+
+    
+  })
+})
+
 app.listen(process.env.PORT || 3000)
->>>>>>> master
 
