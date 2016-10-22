@@ -4,7 +4,8 @@ var keys = {
 	google: 'AIzaSyC4bdaVcDwKdl-iNcFUkOuwi0_pzptNfZ0',
 	sqoot: 'yfnxm3',
 	eventful: 'pvzhm2F4B5MwtBbB',
-	google: 'AIzaSyC4bdaVcDwKdl-iNcFUkOuwi0_pzptNfZ0'
+	google: 'AIzaSyC4bdaVcDwKdl-iNcFUkOuwi0_pzptNfZ0',
+	yandex: 'trnsl.1.1.20161013T163156Z.2567488658ef9612.1c3f578efcfa73e08cf35738bc170a455c03fcd8'
 }
 
 module.exports = keys;
