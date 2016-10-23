@@ -3,7 +3,8 @@ var keys = {
 	// google: 'AIzaSyAdT6BVjQ_pKohHEUAbweR3dD0QNHx69G8',
 	google: 'AIzaSyC4bdaVcDwKdl-iNcFUkOuwi0_pzptNfZ0',
 	sqoot: 'yfnxm3',
-	eventful: 'pvzhm2F4B5MwtBbB'
+	eventful: 'pvzhm2F4B5MwtBbB',
+	google: 'AIzaSyC4bdaVcDwKdl-iNcFUkOuwi0_pzptNfZ0'
 }
 
 module.exports = keys;
