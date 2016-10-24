@@ -595,7 +595,7 @@ angular.module('bakpak.explore', [])
 		$http({
 		  method: 'POST',
 		  url: '/translate',
-		  data: {inputText: $scope.translate}
+		  data: {inputText: $scope.translate, country: $scope.selectedCountry}
 		})
 		.then(function(data){
 		  $scope.translate = data.data.text[0];

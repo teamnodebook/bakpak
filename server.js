@@ -96,7 +96,7 @@ app.post('/events', function(req,res){
 })
 app.post('/translate', function(req,res){
   query.text=req.body.inputText
-  query.country = 'en-it';
+  query.country = 'en-' + req.body.country;
   var queryTranslate = query.translate + keys.yandex + '&text=' + query.text + '&lang=' + query.country;
 
   request(queryTranslate, function(error, resp, body){
