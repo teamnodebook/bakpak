@@ -1,6 +1,12 @@
 html {
   background-color: #b4dcc0;
 }
+a {
+  color: black;
+}
+a:hover {
+  color: blue;
+}
 #body {
   background-color: #b4dcc0;
 }
@@ -27,4 +33,39 @@ html {
   padding-left: 5px;
   margin-top: 7px;
 }
-
+#input {
+  background-color: white;
+  border-radius: 4px;
+  padding-left: 8px;
+  color: #464a51;
+}
+#inputarea {
+  margin-top: 10px;
+}
+#label {
+  font-family: 'sansblack';
+  font-size: 130%;
+  color: #464a51;
+}
+#left {
+  margin-right: 10px;
+}
+.label {
+  font-family: 'sansblack';
+}
+.explore {
+  background-color: rgba(238, 251, 244, 0.6);
+  margin-right: 20px;
+  padding-bottom: 5px;
+}
+@font-face {
+    font-family: 'sansblack';
+    src: url('NexaRustSans-Black-Free-webfont.eot');
+    src: url('NexaRustSans-Black-Free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('NexaRustSans-Black-Free-webfont.woff2') format('woff2'),
+         url('NexaRustSans-Black-Free-webfont.woff') format('woff'),
+         url('NexaRustSans-Black-Free-webfont.ttf') format('truetype'),
+         url('NexaRustSans-Black-Free-webfont.svg#nexa_rust_sansblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
