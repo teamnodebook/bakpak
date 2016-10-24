@@ -1,6 +1,9 @@
 html {
   background-color: #b4dcc0;
 }
+a {
+  color: black;
+}
 #body {
   background-color: #b4dcc0;
 }
@@ -15,7 +18,7 @@ html {
 }
 #logo {
   height: 95%;
-  width: 13%;
+  width: 12%;
 }
 #filler {
   height: 60%;
@@ -31,7 +34,6 @@ html {
   background-color: white;
   border-radius: 4px;
   padding-left: 8px;
-  font-family: 'sansblack';
   color: #464a51;
 }
 #inputarea {
@@ -52,6 +54,9 @@ html {
   background-color: rgba(238, 251, 244, 0.6);
   margin-right: 20px;
   padding-bottom: 5px;
+}
+.google:hover{
+  color: blue;
 }
 @font-face {
     font-family: 'sansblack';
